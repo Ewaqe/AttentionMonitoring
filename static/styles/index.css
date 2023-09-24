@@ -1,0 +1,30 @@
+.content {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__button {
+  width: 210px;
+  height: 65px;
+  background-color: inherit;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "RussianRail G Pro", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.upload {
+  width: 25px;
+  height: 25px;
+}
+
+input[type="file"] {
+  display: none;
+}

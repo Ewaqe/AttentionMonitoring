@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="../static/styles/video.css">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="back-button">
+        <input type="image" onclick="history.back();" src="../static/images/back.svg" class="back-button" />
+    </div>
+    <div class="video">
+        <video src="../{{ video[2] }}" controls>
+        </video>
+    </div>
+    <div class="video-info">
+        <div class="violations">
+            <span>Время нарушений:</span>
+            <ul>
+                <li>34:12</li>
+                <li>53:41</li>
+            </ul>
+        </div>
+        <span class="video-info-name">{{ file }}</span>
+    </div>
+</div>
+{% endblock %}

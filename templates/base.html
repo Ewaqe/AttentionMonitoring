@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../static/styles/main.css">
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    <div class="flexbox">
+        <nav>
+            <div class="logotype navbar__logotype">
+                <a href="{{ url_for('index') }}"><img src="../static/images/logotype.png" alt=""></a>
+            </div>
+            <div class="navbar__navigation">
+                <div class="navbar__navigation-left">
+                    <a class="navbar__item navbar__link navbar__item-text" href="{{ url_for('get_videos') }}">Загруженные видео</a>
+                    <a class="navbar__item navbar__link navbar__item-text">Справка</a>
+                </div>
+                <div class="navbar__navigation-right">
+                    <a class="navbar__item navbar__link navbar__item-login">
+                        <span class="navbar__item-text">
+                            Вход
+                        </span>
+                        <img class="navbar__item-icon exit" src="../static/images/exit.svg">
+                    </a>
+                    <a class="navbar__item navbar__link">
+                        <img class="navbar__item-icon search" src="../static/images/search.svg">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="container">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        <footer>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="../static/styles/videos.css">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="content__section search-section">
+        <span class="search-item search-text">
+            Поиск результатов
+        </span>
+        <input type="text" name="" value="" placeholder="Название видео" class="search-item search-input">
+    </div>
+    <div class="content__section result-section">
+        <table class="result-table">
+            <thead>
+                <tr>
+                    <th class="table-header result-number">Номер результата</th>
+                    <th class="table-header video-name">Название видео</th>
+                    <th class="table-header header-empty"></th>
+                    <th class="table-header violations-quantity">Выявлено нарушений</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for video in response["videos"] %}
+                    <tr onclick="window.location='videos/{{video["id"]}}';">
+                        <td>{{ video["id"] }}</td>
+                        <td>{{ video["fileName"] }}</td>
+                        <td></td>
+                        <td>{{ video["reportPath"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

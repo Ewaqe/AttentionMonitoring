@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="../static/styles/index.css">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <form action="{{ url_for('upload_video') }}" method="post" enctype="multipart/form-data">
+        <label class="main__button button-load">
+            <span class="main__button-text">ЗАГРУЗИТЬ</span>
+            <img class="main__button-icon upload" src="../static/images/upload.svg">
+            <input type="file" name="file" onchange="this.form.submit()"/>
+        </label>
+    </form>
+</div>
+{% endblock %}

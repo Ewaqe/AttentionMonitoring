@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+@font-face {
+  font-family: "RussianRail G Pro";
+  src: url(../fonts/RussianRail_G_Pro_Extend.otf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: IBM Plex Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  height: 65px;
+  display: flex;
+}
+
+footer {
+  height: 130px;
+  background-color: #464A53;
+}
+
+.main {
+  flex-grow: 3;
+  display: flex;
+  justify-content: center;
+  background-color: #E9EAED;
+}
+
+.logotype {
+  height: 100%;
+  width: 105px;
+}
+
+.logotype img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.navbar__navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar__navigation-left, .navbar__navigation-right {
+  display: flex;
+  height: 100%;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.navbar__item {
+  height: 60%;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-right: 1px solid #E9EAED;
+}
+
+.navbar__item-login {
+  display: flex;
+}
+
+.navbar__item-icon.exit, .main__button-icon.upload {
+  margin-left: 6px;
+}
+
+.container {
+  z-index: 100;
+  bottom: 110px;
+  position: absolute;
+  width: 90%;
+  height: calc(100vh - 195px);
+}
